@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webappbnd:WebAppBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:webappbnd="webappbnd.xmi" xmi:id="WebAppBinding_1251663066218" virtualHostName="default_host">
+	<webapp href="WEB-INF/web.xml#WebApp_ID"/>
+	<ejbRefBindings xmi:id="EjbRefBinding_1252114740645" jndiName="ru.lukdiman.ejb.core.jmsmessage.JMSMessageHome">
+		<bindingEjbRef href="WEB-INF/web.xml#EjbRef_1252108343393"/>
+	</ejbRefBindings>
+</webappbnd:WebAppBinding>

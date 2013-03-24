@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar id="ejb-jar_ID" version="2.1" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+    <enterprise-beans>
+        <session id="JMSMessage">
+            <ejb-name>JMSMessage</ejb-name>
+            <home>ru.lukdiman.ejb.core.jmsmessage.JMSMessageHome</home>
+            <remote>ru.lukdiman.ejb.core.jmsmessage.JMSMessage</remote>
+            <ejb-class>ru.lukdiman.ejb.core.jmsmessage.JMSMessageBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref id="ResourceRef_859346542736">
+                <description>Фабрика соединений</description>
+                <res-ref-name>LQTest</res-ref-name>
+                <res-type>javax.jms.QueueConnectionFactory</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Unshareable</res-sharing-scope>
+            </resource-ref>
+            <resource-ref id="ResourceRef_634827236363">
+                <description></description>
+                <res-ref-name>jms/HOME.TO.ES</res-ref-name>
+                <res-type>javax.jms.Queue</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Unshareable</res-sharing-scope>
+            </resource-ref>
+        </session>
+
+        <message-driven id="JMSMessageMDB">
+            <description></description>
+            <ejb-name>JMSMessageMDB</ejb-name>
+            <ejb-class>ru.lukdiman.ejb.core.jmsmessage.JMSMessageMDB</ejb-class>
+            <transaction-type>Container</transaction-type>
+           <message-destination-type>javax.jms.Queue</message-destination-type>
+        </message-driven>
+    </enterprise-beans>
+</ejb-jar>

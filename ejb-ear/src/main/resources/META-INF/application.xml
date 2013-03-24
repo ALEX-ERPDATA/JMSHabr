@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	version="6" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd">
+
+	<application-name>Test 1</application-name>
+
+	<module>
+		<ejb>ejb-core-websphere.jar</ejb>
+	</module>
+
+	<module>
+		<web>
+			<web-uri>ejb-web.war</web-uri>
+			<context-root>habr</context-root>
+		</web>
+	</module>
+
+	<library-directory>lib</library-directory>
+
+</application> 

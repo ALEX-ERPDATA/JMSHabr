@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+      <servlet-name>SendJMSMessage</servlet-name>
+      <servlet-class>ru.lukdiman.ejb.web.servlet.SendJMSMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SendJMSMessage</servlet-name>
+      <url-pattern>/sendMessage</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <ejb-ref id="EjbRef_1252108343393">
+      <ejb-ref-name>ejb/JMSMessageLocal</ejb-ref-name>
+      <ejb-ref-type>Session</ejb-ref-type>
+      <home>ru.lukdiman.ejb.core.jmsmessage.JMSMessageLocalHome</home>
+      <remote>ru.lukdiman.ejb.core.jmsmessage.JMSMessageLocal</remote>
+      <ejb-link>ejb-core-websphere.jar#JMSMessage</ejb-link>
+    </ejb-ref>
+
+</web-app>
