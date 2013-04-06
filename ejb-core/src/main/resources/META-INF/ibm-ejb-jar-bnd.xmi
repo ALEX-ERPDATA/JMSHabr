@@ -3,7 +3,7 @@
 	<ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
 	<ejbBindings xmi:id="EnterpriseBeanBinding_1251662932984" jndiName="ru.lukdiman.ejb.core.jmsmessage.JMSMessageHome">
 		<enterpriseBean xmi:type="ejb:Session" href="META-INF/ejb-jar.xml#JMSMessage"/>
-        <resRefBindings xmi:id="ResourceRef_994732635623" jndiName="jms/QCF.LQTest">
+        <resRefBindings xmi:id="ResourceRef_994732635623" jndiName="jms/QCF.HABR_QUEUE_MANAGER">
             <bindingResourceRef href="META-INF/ejb-jar.xml#ResourceRef_859346542736"/>
         </resRefBindings>
         <resRefBindings xmi:id="ResourceRef_837482736402" jndiName="jms/HOME.TO.ES">

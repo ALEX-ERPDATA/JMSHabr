@@ -47,7 +47,7 @@ public class JMSMessageBean implements SessionBean {
 	public void ejbCreate() throws EJBException {
         try {
             Context ctx = new InitialContext();
-            connectionFactory = (QueueConnectionFactory) ctx.lookup("java:comp/env/LQTest");
+            connectionFactory = (QueueConnectionFactory) ctx.lookup("java:comp/env/QMHabr");
             destination = (Queue) ctx.lookup("java:comp/env/jms/HOME.TO.ES");
         } catch (NamingException e) {
             throw new EJBException(e);
